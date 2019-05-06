@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	{%block home%}
+	<h1>Home Page</h1>
+	{% endblock %}
+	{%block home2%}
+	<h1>about</h1>
+	{% endblock %}
+	<ul>
+	{% for i in he %}
+		{% if i.title == 'Zengage tutorial'%}
+		<li>
+			<b>{{i.title}}</b>
+		</li>
+		{% else %}
+		<li>
+			{{i.title}}
+		</li>
+		{% endif %}
+		<li>
+			{{i.content}}
+		</li>
+		<li>
+			{{i.tutorial_published}}
+		</li>
+	{% endfor %}
+</ul>
+</body>
+</html>
